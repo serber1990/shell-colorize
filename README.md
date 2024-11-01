@@ -1,11 +1,11 @@
 
-# 🌈 `colorize-term`
+# 🌈 `shellcolorize`
 
-[![PyPI version](https://badge.fury.io/py/colorize-term.svg)](https://badge.fury.io/py/colorize-term)
+[![PyPI version](https://badge.fury.io/py/shellcolorize.svg)](https://badge.fury.io/py/shellcolorize)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/serber1990/colorize-term?style=social)](https://github.com/serber1990/colorize-term/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/serber1990/shellcolorize?style=social)](https://github.com/serber1990/shellcolorize/stargazers)
 
-**`colorize-term`** is a lightweight Python library for adding color to terminal text using ANSI color codes. This library makes it easy to style your command-line output with vibrant colors and backgrounds, perfect for enhancing readability and making CLI applications more visually appealing.
+**`shellcolorize`** is a lightweight Python library for adding color to terminal text using ANSI color codes. This library makes it easy to style your command-line output with vibrant colors and backgrounds, perfect for enhancing readability and making CLI applications more visually appealing.
 
 ---
 
@@ -20,21 +20,21 @@
 
 ## 📥 Installation
 
-Install `colorize-term` from PyPI:
+Install `shellcolorize` from PyPI:
 
 ```bash
-pip install colorize-term
+pip install shellcolorize
 ```
 
 ---
 
 ## 🛠 Usage
 
-`colorize-term` makes it easy to color your terminal text. Import `Color` from `colorize_term` and use the color attributes as shown below.
+`shellcolorize` makes it easy to color your terminal text. Import `Color` from `shellcolorize` and use the color attributes as shown below.
 
 ### Basic Usage
 ```python
-from colorize_term import Color
+from shellcolorize import Color
 
 print(f"{Color.RED}This is red text{Color.RESET}")
 print(f"{Color.GREEN}This is green text{Color.RESET}")
@@ -42,7 +42,7 @@ print(f"{Color.GREEN}This is green text{Color.RESET}")
 
 ### Using Background Colors
 ```python
-from colorize_term import Color
+from shellcolorize import Color
 
 print(f"{Color.BG_YELLOW}{Color.BLACK}Black text on yellow background{Color.RESET}")
 print(f"{Color.BG_BLUE}{Color.WHITE}White text on blue background{Color.RESET}")
@@ -50,7 +50,7 @@ print(f"{Color.BG_BLUE}{Color.WHITE}White text on blue background{Color.RESET}")
 
 ### Combining Text and Background Colors
 ```python
-from colorize_term import Color
+from shellcolorize import Color
 
 print(f"{Color.BG_RED}{Color.CYAN}Cyan text on red background{Color.RESET}")
 print(f"{Color.BG_GREEN}{Color.MAGENTA}Magenta text on green background{Color.RESET}")
@@ -106,4 +106,4 @@ If you have any questions, issues, or suggestions, please feel free to open an i
 
 ---
 
-### 🚀 Let's bring more color to the command line with `colorize-term`!
+### 🚀 Let's bring more color to the command line with `shellcolorize`!
