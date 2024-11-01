@@ -1,42 +1,109 @@
 
-Here's a description you can use for your colorize-term package on GitHub and PyPI. It highlights the purpose, features, and usage of the library:
+# 🌈 `colorize-term`
 
-colorize-term
-colorize-term is a lightweight Python library that provides easy-to-use ANSI color codes for styling terminal output. This package allows developers to add color to text in command-line applications with minimal effort, improving readability and making terminal output more engaging.
+[![PyPI version](https://badge.fury.io/py/colorize-term.svg)](https://badge.fury.io/py/colorize-term)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/serber1990/colorize-term?style=social)](https://github.com/serber1990/colorize-term/stargazers)
 
-Features
-Supports a range of standard foreground (text) and background colors.
-Includes a reset function to reset text formatting back to normal.
-Simple and intuitive syntax for applying colors.
-Works across Unix-based terminals (Linux, macOS) and compatible environments.
-Installation
-Install colorize-term directly from PyPI:
+**`colorize-term`** is a lightweight Python library for adding color to terminal text using ANSI color codes. This library makes it easy to style your command-line output with vibrant colors and backgrounds, perfect for enhancing readability and making CLI applications more visually appealing.
 
-bash
-Copy code
+---
+
+## ✨ Features
+
+- 🌈 **Wide Range of Colors**: Includes standard text and background colors.
+- 🚀 **Easy to Use**: Simple and intuitive API to add color to terminal text.
+- 💡 **ANSI Standard**: Uses ANSI color codes, compatible with most Unix-based terminals and compatible environments.
+- 🔗 **Open Source**: Licensed under the MIT License.
+
+---
+
+## 📥 Installation
+
+Install `colorize-term` from PyPI:
+
+```bash
 pip install colorize-term
-Usage
-Import Color from colorize-term and use the provided color constants for text and background colors.
+```
 
-python
-Copy code
+---
+
+## 🛠 Usage
+
+`colorize-term` makes it easy to color your terminal text. Import `Color` from `colorize_term` and use the color attributes as shown below.
+
+### Basic Usage
+```python
 from colorize_term import Color
 
-# Example usage for text colors
 print(f"{Color.RED}This is red text{Color.RESET}")
 print(f"{Color.GREEN}This is green text{Color.RESET}")
+```
 
-# Example usage for background colors
+### Using Background Colors
+```python
+from colorize_term import Color
+
 print(f"{Color.BG_YELLOW}{Color.BLACK}Black text on yellow background{Color.RESET}")
-
-# Combining text and background colors
 print(f"{Color.BG_BLUE}{Color.WHITE}White text on blue background{Color.RESET}")
-Available Colors
-Text Colors: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE
-Background Colors: BG_BLACK, BG_RED, BG_GREEN, BG_YELLOW, BG_BLUE, BG_MAGENTA, BG_CYAN, BG_WHITE
-Reset: Use Color.RESET to clear all color formatting.
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+```
 
-Contributing
-Contributions are welcome! Please feel free to submit issues and pull requests to improve the library.
+### Combining Text and Background Colors
+```python
+from colorize_term import Color
+
+print(f"{Color.BG_RED}{Color.CYAN}Cyan text on red background{Color.RESET}")
+print(f"{Color.BG_GREEN}{Color.MAGENTA}Magenta text on green background{Color.RESET}")
+```
+
+---
+
+## 🎨 Available Colors
+
+### Text Colors
+
+| Color | Usage Example               |
+|-------|------------------------------|
+| Black | `{Color.BLACK}Text{Color.RESET}` |
+| Red   | `{Color.RED}Text{Color.RESET}`   |
+| Green | `{Color.GREEN}Text{Color.RESET}` |
+| Yellow| `{Color.YELLOW}Text{Color.RESET}` |
+| Blue  | `{Color.BLUE}Text{Color.RESET}`   |
+| Magenta | `{Color.MAGENTA}Text{Color.RESET}` |
+| Cyan  | `{Color.CYAN}Text{Color.RESET}`   |
+| White | `{Color.WHITE}Text{Color.RESET}`  |
+
+### Background Colors
+
+| Color       | Usage Example                         |
+|-------------|--------------------------------------|
+| Black       | `{Color.BG_BLACK}Text{Color.RESET}`  |
+| Red         | `{Color.BG_RED}Text{Color.RESET}`    |
+| Green       | `{Color.BG_GREEN}Text{Color.RESET}`  |
+| Yellow      | `{Color.BG_YELLOW}Text{Color.RESET}` |
+| Blue        | `{Color.BG_BLUE}Text{Color.RESET}`   |
+| Magenta     | `{Color.BG_MAGENTA}Text{Color.RESET}`|
+| Cyan        | `{Color.BG_CYAN}Text{Color.RESET}`   |
+| White       | `{Color.BG_WHITE}Text{Color.RESET}`  |
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 💬 Feedback
+
+If you have any questions, issues, or suggestions, please feel free to open an issue in the repository or contact me directly via GitHub.
+
+---
+
+## 🌐 Connect with Me
+
+[![GitHub](https://img.shields.io/badge/GitHub-@serber1990-181717?style=flat-square&logo=github)](https://github.com/serber1990)
+
+---
+
+### 🚀 Let's bring more color to the command line with `colorize-term`!
