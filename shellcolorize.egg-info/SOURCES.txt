@@ -1,8 +1,0 @@
-README.md
-setup.py
-shellcolorize/__init__.py
-shellcolorize/color.py
-shellcolorize.egg-info/PKG-INFO
-shellcolorize.egg-info/SOURCES.txt
-shellcolorize.egg-info/dependency_links.txt
-shellcolorize.egg-info/top_level.txt
