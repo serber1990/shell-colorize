@@ -1,4 +1,3 @@
-
 # 🌈 `shellcolorize`
 
 [![PyPI version](https://badge.fury.io/py/shellcolorize.svg)](https://badge.fury.io/py/shellcolorize)
