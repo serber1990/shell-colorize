@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name="shellcolorize",
-    version="0.1",
-    description="A simple library to add ANSI color codes to terminal text",
+    version="0.3",
+    description="Add color to Linux CLI shell terminal output in ANSI",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     author="Serber1990",

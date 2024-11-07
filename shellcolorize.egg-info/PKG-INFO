@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: shellcolorize
-Version: 0.1
-Summary: A simple library to add ANSI color codes to terminal text
+Version: 0.3
+Summary: Add color to Linux CLI shell terminal output in ANSI
 Home-page: https://github.com/serber1990/shell-colorize
 Author: Serber1990
 Author-email: serber1990@pm.me
