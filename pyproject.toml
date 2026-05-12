@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shellcolorize"
+version = "1.0.0"
+description = "Add color and style to terminal output using ANSI codes"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Serber1990", email = "serber1990@pm.me" }]
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Terminals",
+]
+
+[project.urls]
+Homepage       = "https://github.com/serber1990/shell-colorize"
+"Bug Tracker"  = "https://github.com/serber1990/shell-colorize/issues"
+"Source Code"  = "https://github.com/serber1990/shell-colorize"

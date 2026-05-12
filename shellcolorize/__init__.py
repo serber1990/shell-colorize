@@ -1,5 +1,4 @@
-#__init__.py
-from .color import Color
+from .color import Color, colorize
 
-# Export Color class to make it accessible as `shellcolorize.Color`
-__all__ = ["Color"]
+__version__ = "1.0.0"
+__all__ = ["Color", "colorize"]
