@@ -7,12 +7,12 @@ name = "shellcolorize"
 version = "1.0.0"
 description = "Add color and style to terminal output using ANSI codes"
 readme = "README.md"
-license = { file = "LICENSE" }
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "Serber1990", email = "serber1990@pm.me" }]
 requires-python = ">=3.6"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Environment :: Console",
     "Topic :: Terminals",
