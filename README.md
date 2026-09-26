@@ -1,5 +1,6 @@
 # 🌈 `shellcolorize`
 
+[![CI](https://github.com/serber1990/shell-colorize/actions/workflows/ci.yml/badge.svg)](https://github.com/serber1990/shell-colorize/actions/workflows/ci.yml)
 [![PyPI version](https://badge.fury.io/py/shellcolorize.svg)](https://badge.fury.io/py/shellcolorize)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/serber1990/shell-colorize?style=social)](https://github.com/serber1990/shell-colorize/stargazers)
@@ -13,7 +14,8 @@
 - 🎨 **Full ANSI palette** — 8 standard + 8 bright text colors, same for backgrounds.
 - ✍️ **Text styles** — bold, dim, italic, underline, blink, reverse, strikethrough.
 - 🛠 **`colorize()` helper** — applies styles and resets automatically, no manual `RESET` needed.
-- 🔇 **Smart color detection** — outputs plain text when piped to a file or when `NO_COLOR` is set.
+- 🔇 **Smart color detection** — plain text when piped to a file, honours [`NO_COLOR`](https://no-color.org) and `FORCE_COLOR`.
+- 🔌 **Global on/off switch** — `Color.auto()` / `Color.disable()` make every f-string plain text in one call.
 - 🔗 **Open Source** — MIT License.
 
 ---
@@ -100,20 +102,43 @@ print(f"{Color.BOLD}{Color.CYAN}Bold cyan{Color.RESET}")
 
 ## 🔇 Color detection
 
-`colorize()` automatically outputs plain text (no ANSI codes) in two situations:
+`supports_color()` decides whether colors should be used, following common CLI conventions:
 
-- The output is **not a TTY** — e.g. redirected to a file or piped to another command.
-- The **`NO_COLOR`** environment variable is set (any value), following the [no-color.org](https://no-color.org) convention.
+| Situation | Result |
+|-----------|--------|
+| `NO_COLOR` set (any value) — see [no-color.org](https://no-color.org) | plain text |
+| `FORCE_COLOR` set (any value except `0`) | colors |
+| Output is a terminal | colors |
+| Output redirected to a file or piped | plain text |
 
-```bash
-# Plain text — no color codes in the file
-python script.py > output.txt
+`colorize()` applies this check on every call. For f-strings that use `Color` attributes directly,
+call `Color.auto()` once at start-up and every attribute becomes an empty string when colors are not supported:
 
-# Plain text — respects NO_COLOR
-NO_COLOR=1 python script.py
+```python
+from shellcolorize import Color
+
+def main():
+    Color.auto()          # respects NO_COLOR / FORCE_COLOR / TTY detection
+    print(f"{Color.GREEN}✔ done{Color.RESET}")   # plain "✔ done" when piped
 ```
 
-> Direct use of `Color` attributes (f-strings) always emits ANSI codes regardless of environment.
+`Color.disable()` and `Color.enable()` switch colors off and on explicitly (e.g. for a `--no-color` flag).
+
+```bash
+python script.py > output.txt      # plain text in the file
+NO_COLOR=1 python script.py        # plain text
+FORCE_COLOR=1 python script.py | less -R   # keep colors through a pager
+```
+
+---
+
+## 🧪 Development
+
+```bash
+pip install -e ".[dev]"
+ruff check .
+pytest
+```
 
 ---
 
