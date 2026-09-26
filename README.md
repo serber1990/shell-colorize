@@ -7,6 +7,10 @@
 
 **`shellcolorize`** is a lightweight Python library for adding color and style to terminal output using ANSI codes. Zero dependencies, no configuration — just import and use.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/serber1990/shell-colorize/main/docs/demo.gif" alt="shellcolorize demo: colors in a terminal, plain text when piped or with NO_COLOR" width="820">
+</p>
+
 ---
 
 ## ✨ Features
